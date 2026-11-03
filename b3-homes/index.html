@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="../assets/mq-logo.png">
+<title>B3 Homes Site Visit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: a site-visit ledger. Cover frame, then one numbered "site sheet" per development: header strip, contact grid, downloads. */
+:root{
+  --night:#0F0D0C; --stage:#181513; --line:#2C2824; --ivory:#EFE9E0; --muted:#A79E93; --red:#D62222; --glow:#C9A27A;
+  --f-display:"Bodoni Moda","Didot","Times New Roman",serif;
+  --f-body:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--night);color:var(--ivory);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--f-display);font-weight:400;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* top */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.brands{display:flex;align-items:center;gap:18px}
+.brands img{height:40px;width:auto}
+.brands .x{font-family:var(--f-mono);color:var(--muted);font-size:13px}
+.brands img.b3{height:44px}
+.pill{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);color:var(--muted);padding:6px 10px;border-radius:999px;white-space:nowrap}
+
+/* hero */
+.hero{padding-block:8px 48px}
+.frame{position:relative;aspect-ratio:2.39/1;max-width:100%;border-radius:4px;overflow:hidden;background:var(--stage)}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,13,12,.55),transparent 30%,transparent 70%,rgba(15,13,12,.5))}
+.frame .tc{position:absolute;z-index:1;top:14px;left:16px;right:16px;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:rgba(239,233,224,.85)}
+.rec{display:inline-flex;align-items:center;gap:8px}
+.rec::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}
+.title{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.title h1{font-size:clamp(42px,7.4vw,92px);line-height:.98;letter-spacing:-.01em}
+.title h1 em{font-style:normal;color:var(--glow)}
+.meta{display:flex;flex-direction:column;gap:4px;text-align:right}
+.meta .mono{font-size:14px}
+.meta span{font-size:14px;color:var(--muted)}
+.intro{margin-top:20px;max-width:62ch;color:var(--muted);font-size:17px}
+.jump{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.jump a{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:16px 18px;transition:border-color .2s}
+.jump a:hover{border-color:var(--muted)}
+.jump .n{font-family:var(--f-mono);color:var(--red);font-size:13px}
+.jump b{font-weight:500;font-size:17px;display:block}
+.jump small{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.jump .arrow{color:var(--muted)}
+
+/* site sheet */
+section{padding-block:56px;border-top:1px solid var(--line)}
+.sheet-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;margin-bottom:28px}
+.sheet-head h2{font-size:clamp(32px,4.6vw,54px);line-height:1.04}
+.sheet-head h2 em{font-style:normal}
+.facts{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.facts span b{color:var(--ivory);font-weight:500}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;font-weight:700;font-size:15px;background:var(--ivory);color:var(--night);white-space:nowrap}
+.btn:hover{background:#fff}
+.btn.ghost{background:transparent;color:var(--ivory);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--muted)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.btn:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid .tile:first-child{grid-column:span 2;grid-row:span 2}
+.tile{position:relative;margin:0;border-radius:4px;overflow:hidden;background:var(--stage);border:1px solid var(--line);aspect-ratio:16/9;max-width:100%}
+.tile button.open{all:unset;cursor:zoom-in;position:absolute;inset:0;display:block}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.tile:hover img{transform:scale(1.025)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(transparent,rgba(15,13,12,.88));pointer-events:none}
+.tile .cap .mono{font-size:11px;letter-spacing:.08em;color:rgba(239,233,224,.85)}
+.tile .dl{pointer-events:auto}
+.dl{all:unset;cursor:pointer;font-weight:700;font-size:13px;padding:7px 13px;border-radius:999px;border:1px solid rgba(239,233,224,.35);background:rgba(15,13,12,.55);white-space:nowrap;backdrop-filter:blur(4px)}
+.dl:hover{border-color:var(--ivory)}
+.dl:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.tile button.open:focus-visible{outline:2px solid var(--glow);outline-offset:-4px}
+.acts{display:flex;gap:10px;flex-wrap:wrap}
+a.btn{text-decoration:none}
+.note{margin-top:18px;color:var(--muted);font-size:14px}
+
+/* lightbox */
+.lb[hidden]{display:none!important}
+.lb{position:fixed;inset:0;z-index:40;background:rgba(10,9,8,.96);display:grid;grid-template-rows:auto minmax(0,1fr) auto;
+  padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 14px) max(16px,env(safe-area-inset-left,0px))}
+.lb-top,.lb-bot{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lb-top .mono{font-size:12px;color:var(--muted);letter-spacing:.1em}
+.lb-stage{position:relative;display:grid;place-items:center;min-height:0;padding-block:12px}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:3px}
+.icon{all:unset;cursor:pointer;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:20px;color:var(--ivory);background:rgba(15,13,12,.6)}
+.icon:hover{border-color:var(--ivory)}
+.icon:focus-visible{outline:2px solid var(--glow);outline-offset:3px}
+.lb .prev,.lb .next{position:absolute;top:50%;margin-top:-22px}
+.lb .prev{left:4px}.lb .next{right:4px}
+
+/* foot */
+.thanks{text-align:center;padding-block:64px 36px;border-top:1px solid var(--line)}
+.thanks p{font-family:var(--f-display);font-style:normal;font-size:clamp(22px,3vw,30px);line-height:1.4;max-width:34ch;margin:0 auto}
+.foot{border-top:1px solid var(--line);padding-block:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.foot img{height:30px;width:auto}
+.foot .contact{user-select:all}
+
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ivory);color:var(--night);padding:12px 18px;border-radius:999px;font-size:14px;font-weight:500;transition:opacity .25s,transform .25s;max-width:calc(100% - 32px);text-align:center;z-index:60}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:820px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .title,.sheet-head{grid-template-columns:1fr}
+  .meta{text-align:left}
+  .jump{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .grid .tile:first-child{grid-column:auto;grid-row:auto}
+  .brands img{height:30px}.brands img.b3{height:34px}
+  .pill{display:none}
+  .frame{aspect-ratio:16/10}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brands">
+      <img src="../assets/mq-logo.png" alt="Marq One Studios">
+      <span class="x">×</span>
+      <img class="b3" src="../assets/b3-logo.png" alt="B3 Homes">
+    </div>
+    <span class="pill">Private delivery</span>
+  </header>
+
+  <div class="hero">
+    <div class="frame">
+      <img src="web/B3-st-martins-01.jpg" alt="Aerial view of the St Martins Avenue site in Epsom">
+      <div class="tc"><span class="rec">Site visit</span><span class="mono">02.11.2026</span></div>
+    </div>
+    <div class="title">
+      <h1>B3 Homes <em>site visit</em></h1>
+      <div class="meta">
+        <span class="mono">Monday 2 November 2026</span>
+        <span>Aerial photography · 2 sites · 31 images</span>
+      </div>
+    </div>
+    <p class="intro">Your photographs from this visit are ready. Browse both sites below, open any image full screen, and download single shots or each site as one ZIP. Downloads are 6144 × 3456 JPEGs, ready for web, social and print.</p>
+    <nav class="jump" aria-label="Sites">
+      <a href="#st-martins"><span class="n">01</span><span><b>St Martins Avenue</b><small>Epsom · 20 images</small></span><span class="arrow">↓</span></a>
+      <a href="#lingfield"><span class="n">02</span><span><b>Rome Farm, Lingfield</b><small>Footings · 11 images</small></span><span class="arrow">↓</span></a>
+    </nav>
+  </div>
+</div>
+
+<section id="st-martins">
+  <div class="wrap">
+    <div class="sheet-head">
+      <div>
+        <span class="eyebrow">Site 01</span>
+        <h2>St Martins <em>Avenue</em></h2>
+        <div class="facts"><span>Location <b>Epsom, Surrey</b></span><span>Visit <b>02.11.26</b></span><span>Images <b>20</b></span><span>Zip <b data-size="st-martins"></b></span></div>
+      </div>
+      <div class="acts"><button class="btn" type="button" data-zip="st-martins">Download all 20</button><a class="btn ghost" href="https://drive.google.com/drive/folders/1sF35kTlagGC5KjO9pljc5OZWJnDkCpUO?usp=drive_link" target="_blank" rel="noopener">Full-res originals ↗</a></div>
+    </div>
+    <div class="grid" data-grid="st-martins"></div>
+  </div>
+</section>
+
+<section id="lingfield">
+  <div class="wrap">
+    <div class="sheet-head">
+      <div>
+        <span class="eyebrow">Site 02</span>
+        <h2>Rome Farm, <em>Lingfield</em></h2>
+        <div class="facts"><span>Stage <b>Footings</b></span><span>Visit <b>02.11.26</b></span><span>Images <b>11</b></span><span>Zip <b data-size="lingfield"></b></span></div>
+      </div>
+      <div class="acts"><button class="btn" type="button" data-zip="lingfield">Download all 11</button><a class="btn ghost" href="https://drive.google.com/drive/folders/1I7CTSclZPsMHL9YlaykG7uOVRB2gZWN7?usp=sharing" target="_blank" rel="noopener">Full-res originals ↗</a></div>
+    </div>
+    <div class="grid" data-grid="lingfield"></div>
+    <p class="note">Large downloads are quickest on Wi-Fi. Each ZIP is built in your browser, so keep this page open until the save prompt appears.</p>
+  </div>
+</section>
+
+<div class="wrap thanks">
+  <p>Thanks for having us on site. We'll be back for the next stage.</p>
+</div>
+
+<div class="wrap">
+  <footer class="foot">
+    <img src="../assets/mq-logo.png" alt="Marq One Studios">
+    <span class="contact">contact@marqonestudios.co.uk · www.marqonestudios.co.uk</span>
+  </footer>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lb-top"><span class="mono" id="lbName"></span><button class="icon" type="button" id="lbClose" aria-label="Close">✕</button></div>
+  <div class="lb-stage">
+    <img id="lbImg" alt="">
+    <button class="icon prev" type="button" id="lbPrev" aria-label="Previous image">←</button>
+    <button class="icon next" type="button" id="lbNext" aria-label="Next image">→</button>
+  </div>
+  <div class="lb-bot"><span class="mono" id="lbCount" style="font-size:12px;color:var(--muted)"></span><button class="btn" type="button" id="lbDl">Download full size</button></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+  var DATA={"st-martins": [["B3-st-martins-01.jpg", 5087045], ["B3-st-martins-02.jpg", 5088518], ["B3-st-martins-03.jpg", 5039234], ["B3-st-martins-04.jpg", 5007192], ["B3-st-martins-05.jpg", 5103260], ["B3-st-martins-06.jpg", 4933590], ["B3-st-martins-07.jpg", 5021144], ["B3-st-martins-08.jpg", 5346371], ["B3-st-martins-09.jpg", 5389766], ["B3-st-martins-10.jpg", 5082747], ["B3-st-martins-11.jpg", 5119308], ["B3-st-martins-12.jpg", 5152006], ["B3-st-martins-13.jpg", 5141983], ["B3-st-martins-14.jpg", 5381001], ["B3-st-martins-15.jpg", 5358055], ["B3-st-martins-16.jpg", 4941826], ["B3-st-martins-17.jpg", 4950943], ["B3-st-martins-18.jpg", 5269541], ["B3-st-martins-19.jpg", 5250201], ["B3-st-martins-20.jpg", 5240004]], "lingfield": [["B3-lingfield-01.jpg", 5901159], ["B3-lingfield-02.jpg", 5445952], ["B3-lingfield-03.jpg", 5388638], ["B3-lingfield-04.jpg", 5829435], ["B3-lingfield-05.jpg", 5710606], ["B3-lingfield-06.jpg", 5046340], ["B3-lingfield-07.jpg", 4847858], ["B3-lingfield-08.jpg", 4802987], ["B3-lingfield-09.jpg", 4772552], ["B3-lingfield-10.jpg", 4785789], ["B3-lingfield-11.jpg", 4772175]]};
+  var LABEL={"st-martins":"St Martins Avenue","lingfield":"Rome Farm, Lingfield"};
+  var ZIPNAME={"st-martins":"B3 Homes - St Martins Avenue - 02.11.26.zip","lingfield":"B3 Homes - Rome Farm Lingfield - 02.11.26.zip"};
+  var toast=document.getElementById('toast'),tt;
+  function say(m,ms){toast.textContent=m;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},ms||2800)}
+  function mb(b){return (b/1048576).toFixed(b>1e8?0:1)+' MB'}
+
+  function save(filename,blob){
+    var u=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=u;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(u)},60000);
+    say('Downloading '+filename);
+    return Promise.resolve();
+  }
+  function getBlob(f){return fetch('full/'+f).then(function(r){if(!r.ok)throw new Error(r.status);return r.blob()})}
+  function saveOne(f,btn){
+    var t=btn&&btn.textContent; if(btn){btn.disabled=true;btn.textContent='Preparing…'}
+    return getBlob(f).then(function(b){return save(f,b)}).catch(function(){say('That file could not be loaded. Check your connection and try again.')})
+      .finally(function(){if(btn){btn.disabled=false;btn.textContent=t}});
+  }
+
+  // build grids
+  Object.keys(DATA).forEach(function(site){
+    var g=document.querySelector('[data-grid="'+site+'"]'),total=0;
+    DATA[site].forEach(function(it,i){
+      total+=it[1];
+      var n=String(i+1).padStart(2,'0');
+      var fig=document.createElement('figure');fig.className='tile';
+      fig.innerHTML='<button class="open" type="button" aria-label="Open '+LABEL[site]+' image '+n+'"><img loading="'+(i<3?'eager':'lazy')+'" src="'+(i===0?'web/':'thumb/')+it[0]+'" alt="'+LABEL[site]+', aerial image '+n+'"></button>'+
+        '<figcaption class="cap"><span class="mono">'+n+' · '+mb(it[1])+'</span><button class="dl" type="button">Download</button></figcaption>';
+      fig.querySelector('.open').addEventListener('click',function(){openLb(site,i)});
+      fig.querySelector('.dl').addEventListener('click',function(e){saveOne(it[0],e.currentTarget)});
+      g.appendChild(fig);
+    });
+    document.querySelector('[data-size="'+site+'"]').textContent=mb(total);
+  });
+
+  // zips
+  document.querySelectorAll('[data-zip]').forEach(function(btn){
+    var site=btn.getAttribute('data-zip'),label=btn.textContent;
+    btn.addEventListener('click',function(){
+      if(typeof JSZip==='undefined'){say('The ZIP tool did not load. Download images one at a time instead.',4000);return}
+      btn.disabled=true;var list=DATA[site],done=0,zip=new JSZip();
+      btn.textContent='Fetching 0 / '+list.length;
+      var q=list.slice(),running=0;
+      new Promise(function(res,rej){
+        function next(){
+          if(!q.length&&!running)return res();
+          while(running<4&&q.length){(function(it){running++;getBlob(it[0]).then(function(b){zip.file(it[0],b);done++;running--;btn.textContent='Fetching '+done+' / '+list.length;next()},rej)})(q.shift())}
+        }
+        next();
+      }).then(function(){btn.textContent='Packing…';return zip.generateAsync({type:'blob',compression:'STORE'})})
+        .then(function(b){return save(ZIPNAME[site],b)})
+        .catch(function(){say('The ZIP could not be built. Check your connection and try again.',4000)})
+        .finally(function(){btn.disabled=false;btn.textContent=label});
+    });
+  });
+
+  // lightbox
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cur={site:null,i:0},lastFocus;
+  function show(){var it=DATA[cur.site][cur.i];img.src='web/'+it[0];img.alt=LABEL[cur.site]+', aerial image '+(cur.i+1);
+    document.getElementById('lbName').textContent=LABEL[cur.site].toUpperCase();
+    document.getElementById('lbCount').textContent=String(cur.i+1).padStart(2,'0')+' / '+String(DATA[cur.site].length).padStart(2,'0')+' · '+mb(it[1]);}
+  function openLb(site,i){lastFocus=document.activeElement;cur={site:site,i:i};show();lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbClose').focus()}
+  function close(){lb.hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+  function step(d){var n=DATA[cur.site].length;cur.i=(cur.i+d+n)%n;show()}
+  document.getElementById('lbClose').onclick=close;
+  document.getElementById('lbPrev').onclick=function(){step(-1)};
+  document.getElementById('lbNext').onclick=function(){step(1)};
+  document.getElementById('lbDl').onclick=function(e){saveOne(DATA[cur.site][cur.i][0],e.currentTarget)};
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-stage'))close()});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
+  var sx=null;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)step(dx<0?1:-1);sx=null});
+})();
+</script>
+
+</body>
+</html>
